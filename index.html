@@ -102,6 +102,11 @@
 				padding-top: 5%;
 				padding-left: 2%;
 			}
+
+			.code-block__light {
+				background: #fff;
+				color: #333;
+			}
 		</style>
 	</head>
 	<body>
@@ -141,16 +146,38 @@
 
 				<!--  Slide #3 What are Web Components? -->
 				<section>
-						<section data-background-color="#000">
-								<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
-						</section>
-						<section>
-								<img src="images/Api1.png"/>
-						</section>
-						<section>
-								<img src="images/Api2.png"/>
-						</section>
+					<section data-background-color="#000">
+							<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
+					</section>
+					<section >
+						<pre><code data-trim data-noescape class="code-block__light">
+							&lth2> Hello UI5 Con &lth2/>
+							&ltbutton> Press me &ltbutton/>
+							&ltul>
+								&ltli>Pineapple&lt/li>
+								&ltli>Apple&lt/li>
+								&ltli>Banana&lt/li>
+							&lt/ul>
+						</code></pre>
+
+						<pre><code data-trim data-noescape class="code-block__light">
+							&ltui5-title> Hello UI5 Con &ltui5-title/>
+							&ltui5-button> Hello UI5 Con &ltui5-button/>
+							&ltui5-list>
+								&ltui5-li>Pineapple&lt/ui5-li>
+								&ltui5-li>Apple&lt/ui5-li>
+								&ltui5-li>Banana&lt/ui5-li>
+							&lt/ui5-list>
+							</code></pre>
+						
+					</section>
+
+					<section>
+						<img src="images/html.png"/>
+						<img src="images/ui5.png"/>
+					</section>
 				</section>
+
 				<!-- <section>
 					<section>
 						<h3>Getting Started</h3>
@@ -161,9 +188,13 @@
 					</section>
 				</section> -->
 
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">High Level <span class="ui5con-orange">Architecture</span></h2>
+				</section>
+
 				<section>
-					<section>
-						<h3>Enterprise Standards</h3>
+					<section data-background-color="#000">
+						<h2 class="ui5con-divider"><span class="ui5con-orange">Enterprise Standards</span></h3>
 					</section>
 					<section>
 						<h3>Theming + Demo</h3>
@@ -172,7 +203,7 @@
 						<h3>Accesibility + Demo</h3>
 					</section>
 					<section>
-						<h3>Globalization + Demo</h3>
+						<h3>i18n + Demo</h3>
 					</section>
 				</section>
 
