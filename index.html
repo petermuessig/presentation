@@ -128,11 +128,97 @@
 					</div>
 				</section>
 
+				<!--  Slide #1 What are Web Components? -->
+				<section>
+					<section data-background-color="#000">
+						<h2 class="ui5con-divider">Throw <span class="ui5con-orange">Back ...</span></h2>
+					</section>
+
+					<section>
+						<h2>UI5 Con 2017 ...</h2>
+						<img src="images/ui5con-2017.png" style="width: 80%; height: 50%"/>
+					</section>
+
+					<section>
+						<h2>UI5 Con 2018 ...</h2>
+						<img src="images/ui5con-2018.png" style="width: 80%; height: 50%"/>
+					</section>
+
+					<section>
+						<h2>UI5 Con 2019 ...</h2>
+						<img src="images/ui5con-2019.png" style="width: 80%; height: 50%"/>
+					</section>
+				</section>
 
 				<!--  Slide #2 What are Web Components? -->
 				<section>
 					<section data-background-color="#000">
 							<h2 class="ui5con-divider">What are <span class="ui5con-orange">Web Components?</span></h2>
+					</section>
+
+					<section>
+						<ul>
+							<!-- <li>Set of web platform APIs</li>
+							<li>Custom HTML Elements</li>
+							<li>Easy to consume</li>
+							<li>Tiny size</li> -->
+
+							<li>Custom Elements</li>
+							<li>Shadow DOM</li>
+							<li>HTML Imports</li>
+							<li>Templates</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Custom Elements</h2>
+						<span>Create your own custom HTML Tags</span>
+						<br>
+						<br>
+						<pre><code data-trim>
+							<my-component>
+								<h1>Hello UI5 Con!</h1>
+
+								<span>UI5 Web Components</span>
+							</my-component>
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Shadow DOM</h2>
+						<span>Encapsulate styling, behaviour and representation</span>
+						<br>
+						<br>
+						<pre><code data-trim>
+									const shadow = this.createShadowRoot();
+
+									shadow.innerHTML = '<h1 style="color: red">Hello UI5 Con!</h1>';
+							</code></pre>
+					</section>
+
+					<section>
+						<h2>HTML Imports</h2>
+						<span>Package your elements and import them</span>
+						<br>
+						<br>
+						<pre><code data-trim>
+							<link rel="import" href="myElement.html">
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Templates</h2>
+						<span>Reuse HTML blocks to define your dynamic parts in your application</span>
+						<br>
+						<br>
+						<pre><code data-trim>
+							<template>
+								<tr>
+									<td>Cell 1</td>
+									<td>Cell 2</td>
+								</tr>
+							</template>
+						</code></pre>
 					</section>
 
 					<section>
@@ -147,6 +233,7 @@
 				<!--  Slide #3 What are Web Components? -->
 				<section>
 					<section data-background-color="#000">
+						
 							<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
 					</section>
 					<section >
@@ -244,7 +331,7 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/highlight/highlight.js', async: true,  }
 				]
 			});
 		</script>
