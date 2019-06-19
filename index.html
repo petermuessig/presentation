@@ -390,32 +390,58 @@
 						<img src="images/theming3.png" />
 					</section>
 
-					<section>
-						<h3>Theming</h3>
-						<img src="images/theming4.png" />
-					</section>
-					<section>
-						<h3>Theming</h3>
-						<img src="images/theming2.png" />
-					</section>
-					<section>
-						<h3>Theming</h3>
-						<img src="images/theming3.png" />
-					</section>
-
-					<section>
+					<section style="text-align: center;">
 						<h3>Accessibility</h3>
-						<ui5-list style="width: 25%; text-align: left" header-text="Shop 1">
-							<ui5-li>Pineapple</ui5-li>
-							<ui5-li>Apple</ui5-li>
-							<ui5-li selected>Banana</ui5-li>
-						</ui5-list>
 						<br>
-						<ui5-list style="width: 25%; text-align: left" header-text="Shop 2">
-							<ui5-li>Strawberry</ui5-li>
-							<ui5-li selected>Melon</ui5-li>
-							<ui5-li>Orange</ui5-li>
-						</ui5-list>
+						<div style="justify-content: center; width: 50%; font-size: 1rem; margin: 0 auto;">
+							<ui5-tabcontainer collapsed fixed show-overflow style="margin-bottom: 1rem;">
+									<ui5-tab text="The" selected></ui5-tab>
+									<ui5-tab text="UI5" ></ui5-tab>
+									<ui5-tab text="Web"></ui5-tab>
+									<ui5-tab text="Components"></ui5-tab>
+									<ui5-tab text="Are"></ui5-tab>
+									<ui5-tab text="Here"></ui5-tab>
+									<ui5-tab text="And"></ui5-tab>
+									<ui5-tab text="They"></ui5-tab>
+									<ui5-tab text="Are"></ui5-tab>
+									<ui5-tab text="Accessible"></ui5-tab>
+									<ui5-tab text="Contacts"></ui5-tab>
+									<ui5-tab text="Tab1"></ui5-tab>
+									<ui5-tab text="Tab2"></ui5-tab>
+									<ui5-tab text="Tab3"></ui5-tab>
+									<ui5-tab text="Tab4"></ui5-tab>
+									<ui5-tab text="Tab5"></ui5-tab>
+									<ui5-tab text="Tab6"></ui5-tab>
+							</ui5-tabcontainer>
+
+							<div style="display: flex;flex-direction: row; justify-content:space-between; margin-bottom: 1rem;">
+								<ui5-checkbox text="I agree"></ui5-checkbox>
+								<ui5-button disabled>Disabled</ui5-button>
+								<ui5-datepicker style="width: 300px; margin-bottom: 1rem;"">
+								</ui5-datepicker>
+							</div>
+							<div style="display: flex;flex-direction: row; justify-content: space-between">
+								<ui5-card  heading="Team Space" subtitle="Direct Reports" status="3 of 10" style="width: 40%;">
+									<div class="card-content">
+										<ui5-list separators="None" class="card-content-child" style="width: 100%;text-align: left;">
+											<ui5-li description="User Researcher">Alain Chevalier</ui5-li>
+											<ui5-li description="Artist">Monique Legrand</ui5-li>
+											<ui5-li description="UX Specialist" selected>Michael Adams</ui5-li>
+										</ui5-list>
+									</div>
+								</ui5-card>
+								<br>
+								<ui5-card  heading="This header is interactive" header-interactive subtitle="Click, press Enter or Space" status="3 of 6" style="width: 40%;">
+									<div class="card-content">
+										<ui5-list separators="None" class="card-content-child" style="width: 100%;text-align: left;">
+											<ui5-li description="Software Architect">Richard Wilson</ui5-li>
+											<ui5-li description="Visual Designer" selected>Elena Petrova</ui5-li>
+											<ui5-li description="Quality Specialist">John Miller</ui5-li>
+										</ui5-list>
+									</div>
+								</ui5-card>
+							</div>
+						</div>
 					</section>
 
 					<section>
