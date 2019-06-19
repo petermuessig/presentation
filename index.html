@@ -267,140 +267,175 @@
 
 			<!--  Slide #3 What are Web Components? -->
 			<section>
-				<section data-background-color="#000">
-					<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
-				</section>
-				<section>
+					<section data-background-color="#000">
+						<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
+					</section>
 
-					<h3>Native HTML Elements</h3>
-					<br>
-					<pre><code data-trim data-noescape>
-							&lth2>Hello UI5 Con&lt/h2>
+					<section>
 
-							&ltbutton>Press me&lt/button>
+						<h3>Native HTML Elements</h3>
+						<br>
+						<pre><code data-trim data-noescape>
+								&lth2>Hello UI5 Con&lt/h2>
 
-							&ltul>
-								&ltli>Pineapple&lt/li>
-								&ltli>Apple&lt/li>
-								&ltli>Banana&lt/li>
-							&lt/ul>
-						</code></pre>
-				</section>
-				<section>
+								&ltbutton>Press me&lt/button>
 
-					<h3>Custom HTML Elements</h3>
-					<br>
-					<pre><code data-trim data-noescape>
-							&ltui5-title>Hello UI5 Con&lt/ui5-title>
+								&ltul>
+									&ltli>Pineapple&lt/li>
+									&ltli>Apple&lt/li>
+									&ltli>Banana&lt/li>
+								&lt/ul>
+							</code></pre>
+					</section>
 
-							&ltui5-button>Hello UI5 Con&lt/ui5-button>
+					<section>
 
-							&ltui5-list>
-								&ltui5-li>Pineapple&lt/ui5-li>
-								&ltui5-li>Apple&lt/ui5-li>
-								&ltui5-li>Banana&lt/ui5-li>
-							&lt/ui5-list>
-						</code></pre>
-				</section>
+						<h3>Custom HTML Elements</h3>
+						<br>
+						<pre><code data-trim data-noescape>
+								&ltui5-title>Hello UI5 Con&lt/ui5-title>
 
-				<section>
+								&ltui5-button>Hello UI5 Con&lt/ui5-button>
 
-					<div class="demo-wrapper">
+								&ltui5-list>
+									&ltui5-li>Pineapple&lt/ui5-li>
+									&ltui5-li>Apple&lt/ui5-li>
+									&ltui5-li>Banana&lt/ui5-li>
+								&lt/ui5-list>
+							</code></pre>
+					</section>
 
-						<div class="sample-demo">
-							<h2>Hello UI5 Con</h2>
+					<section>
 
-							<button style="font-size: 100%;">Press me</button>
-							<br>
+						<div class="demo-wrapper">
 
-							<ul>
-								<li>Pineapple</li>
-								<li>Apple</li>
-								<li>Banana</li>
-							</ul>
+							<div class="sample-demo">
+								<h2>Hello UI5 Con</h2>
+
+								<button style="font-size: 100%;">Press me</button>
+								<br>
+
+								<ul>
+									<li>Pineapple</li>
+									<li>Apple</li>
+									<li>Banana</li>
+								</ul>
+							</div>
+
+							<div class="sample-demo">
+								<ui5-title level="H1">Hello UI5 Con</ui5-title>
+
+								<ui5-button>Press me</ui5-button>
+
+								<br>
+
+								<ui5-list style="text-align: left;">
+									<ui5-li>Pineapple</ui5-li>
+									<ui5-li>Apple</ui5-li>
+									<ui5-li>Banana</ui5-li>
+								</ui5-list>
+							</div>
 						</div>
 
-						<div class="sample-demo">
-							<ui5-title level="H1">Hello UI5 Con</ui5-title>
+					</section>
 
-							<ui5-button>Press me</ui5-button>
-
-							<br>
-
-							<ui5-list>
-								<ui5-li>Pineapple</ui5-li>
-								<ui5-li>Apple</ui5-li>
-								<ui5-li>Banana</ui5-li>
-							</ui5-list>
-						</div>
-					</div>
-
-				</section>
-
-				<section>
-					<pre><code data-trim data-noescape>
-							&ltui5-datepicker value="2019-06-28" id="dp">&lt/ui5-datepicker>
+					<section>
+						<pre><code data-trim data-noescape>
+								&ltui5-datepicker value="2019-06-28" id="dp">&lt/ui5-datepicker>
 						</code></pre>
 
-					<ui5-datepicker value="2019-06-28" id="dp" style="font-size: initial; width: 50%"></ui5-datepicker>
+						<ui5-datepicker value="2019-06-28" id="dp" style="font-size: initial; width: 50%"></ui5-datepicker>
 
-					<br>
-					<br>
+						<br>
+						<br>
 
-					<script>
-						const datepicker = document.getElementById("dp");
-
-						datepicker.addEventListener('change', (event) => {
-							alert(event.target.value);
-						});
-					</script>
-
-					<pre><code data-trim data-noescape>
+						<script>
 							const datepicker = document.getElementById("dp");
-
-							console.log(datepicker.value); // 2019-06-28
 
 							datepicker.addEventListener('change', (event) => {
 								alert(event.target.value);
 							});
+						</script>
 
-							</code></pre>
+						<pre><code data-trim data-noescape>
+								const datepicker = document.getElementById("dp");
 
-				</section>
+								console.log(datepicker.value); // 2019-06-28
 
-				<section>
-					<h3>Theming</h3>
-					<img src="images/theming4.png" />
-				</section>
-				<section>
-					<h3>Theming</h3>
-					<img src="images/theming2.png" />
-				</section>
-				<section>
-					<h3>Theming</h3>
-					<img src="images/theming3.png" />
-				</section>
-				<section>
-					<h3>Accessibility</h3>
-				</section>
-				<section>
-					<h3>i18n</h3>
-					<img src="images/i18n.png" />
-				</section>
-
-				<section>
-					<h3>RTL</h3>
-					<br>
-					<pre><code data-trim data-noescape>
-						&ltscript data-id="sap-ui-config" type="application/json">
-							{
-								rtl: true
-							}
-						&lt/script>
+								datepicker.addEventListener('change', (event) => {
+									alert(event.target.value);
+								});
 						</code></pre>
-					<img src="images/rtl.png" />
+
+					</section>
 				</section>
-			</section>
+
+				<section>
+					<section data-background-color="#000">
+						<h2 class="ui5con-divider">Enterprise<span class="ui5con-orange"> standards</span></h2>
+					</section>
+
+					<section>
+						<h3>Theming</h3>
+						<img src="images/theming4.png" />
+					</section>
+
+					<section>
+						<h3>Theming</h3>
+						<img src="images/theming2.png" />
+					</section>
+
+					<section>
+						<h3>Theming</h3>
+						<img src="images/theming3.png" />
+					</section>
+
+					<section>
+						<h3>Theming</h3>
+						<img src="images/theming4.png" />
+					</section>
+					<section>
+						<h3>Theming</h3>
+						<img src="images/theming2.png" />
+					</section>
+					<section>
+						<h3>Theming</h3>
+						<img src="images/theming3.png" />
+					</section>
+
+					<section>
+						<h3>Accessibility</h3>
+						<ui5-list style="width: 25%; text-align: left" header-text="Shop 1">
+							<ui5-li>Pineapple</ui5-li>
+							<ui5-li>Apple</ui5-li>
+							<ui5-li selected>Banana</ui5-li>
+						</ui5-list>
+						<br>
+						<ui5-list style="width: 25%; text-align: left" header-text="Shop 2">
+							<ui5-li>Strawberry</ui5-li>
+							<ui5-li selected>Melon</ui5-li>
+							<ui5-li>Orange</ui5-li>
+						</ui5-list>
+					</section>
+
+					<section>
+						<h3>i18n</h3>
+						<img src="images/i18n.png" />
+					</section>
+
+					<section>
+						<h3>RTL</h3>
+						<br>
+						<pre><code data-trim data-noescape>
+							&ltscript data-id="sap-ui-config" type="application/json">
+								{
+									rtl: true
+								}
+							&lt/script>
+							</code></pre>
+						<img src="images/rtl.png" />
+					</section>
+				</section>
 
 			<section>
 				<section data-background-color="#000">
@@ -427,75 +462,6 @@
 			<section>
 				<section data-background-color="#000">
 					<h2 class="ui5con-divider">Community<span class="ui5con-orange"> Feedback</span></h3>
-				</section>
-				<section>
-					<img src="images/feed1.png" />
-				</section>
-				<section>
-					<img src="images/feedback.png" />
-				</section>
-				<section>
-					<img src="images/feed2.png" />
-				</section>
-				<section>
-					<img src="images/medium.png" />
-					<img src="images/9libs.png" />
-				</section>
-			</section>
-
-			<section>
-				<section data-background-color="#000">
-					<h2 class="ui5con-divider">2019<span class="ui5con-orange"> Roadmap</span></h3>
-				</section>
-				<section>
-					<img src="images/roadmap.png" />
-				</section>
-			</section>
-
-			<!-- Thank you -->
-			<section data-background-color="#000">
-				<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
-				<div class="ui5con-logo"></div>
-				<div class="ui5con-speakerdetails">
-					Contact information:<br><br>
-					Ilhan Myumyun<br>
-					https://twitter.com/ilhanorhan007
-					Martin Hristov<br>
-					https://twitter.com/MartoHristov<br>
-					https://github.com/SAP/ui5-webcomponents
-				</div>
-			</section>
-
-			<section>
-				<h3>RTL</h3>
-			</section>
-			</section>
-
-			<section>
-				<section data-background-color="#000">
-					<h2 class="ui5con-divider">High Level <span class="ui5con-orange">Architecture</span></h2>
-				</section>
-				<section>
-					<img src="images/architecture.png" />
-				</section>
-				<section>
-					<h3>Class Hierarchy</span></h3>
-					<br>
-					<img src="images/class.png" />
-				</section>
-				<section>
-					<h3>Declarative Renderer</span></h3>
-					<img src="images/hbs.png" />
-				</section>
-				<section>
-					<h3>Rendering</span></h3>
-					<img src="images/rendering.png" />
-				</section>
-			</section>
-
-			<section>
-				<section data-background-color="#000">
-					<h2 class="ui5con-divider">Community<span class="ui5con-orange">Feedback</span></h3>
 				</section>
 				<section>
 					<img src="images/feed1.png" />
