@@ -154,16 +154,11 @@
 				<!--  Slide #2 What are Web Components? -->
 				<section>
 					<section data-background-color="#000">
-							<h2 class="ui5con-divider">What are <span class="ui5con-orange">Web Components?</span></h2>
+						<h2 class="ui5con-divider">What are <span class="ui5con-orange">Web Components?</span></h2>
 					</section>
 
 					<section>
-						<ul>
-							<!-- <li>Set of web platform APIs</li>
-							<li>Custom HTML Elements</li>
-							<li>Easy to consume</li>
-							<li>Tiny size</li> -->
-
+						<ul style="list-style: none;">
 							<li>Custom Elements</li>
 							<li>Shadow DOM</li>
 							<li>HTML Imports</li>
@@ -177,6 +172,9 @@
 						<br>
 						<br>
 						<pre><code data-trim>
+							class MyComponent extends HTMLElement {...}
+							window.customElements.define('my-component', MyComponent);
+
 							<my-component>
 								<h1>Hello UI5 Con!</h1>
 
@@ -276,10 +274,10 @@
 					</section>
 
 					<section>
-							<img src="images/API2.png"/>
+						<img src="images/api.png"/>
 					</section>
 					<section>
-						<img src="images/API.png"/>
+						<img src="images/api2.png"/>
 					</section>
 
 					<section>
@@ -357,7 +355,7 @@
 
 				<section>
 					<section data-background-color="#000">
-						<h2 class="ui5con-divider">Community<span class="ui5con-orange">Feedback</span></h3>
+						<h2 class="ui5con-divider">Community<span class="ui5con-orange"> Feedback</span></h3>
 					</section>
 					<section>
 						<img src="images/feed1.png"/>
@@ -390,8 +388,10 @@
 					<div class="ui5con-speakerdetails">
 							Contact information:<br><br>
 							Ilhan Myumyun<br>
+							https://twitter.com/ilhanorhan007
 							Martin Hristov<br>
-							https://github.com/SAP/ui5-webcomponents<br>
+							https://twitter.com/MartoHristov<br>
+							https://github.com/SAP/ui5-webcomponents
 					</div>
 				</section>
 			</div>
