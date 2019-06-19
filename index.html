@@ -1,177 +1,202 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>UI5con@SAP 2019</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+	<title>UI5con@SAP 2019</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<script src="resources/sap/ui/webcomponents/main/bundle.esm.js" type="module"></script>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
 
-		<style>
-			.reveal {
-				font-size: 58px;
-			}
-			.reveal,
-			.reveal h1,
-			.reveal h2,
-			.reveal h3,
-			.reveal h4,
-			.reveal h5,
-			.reveal h6 {
-				font-family: Arial, Helvetica, sans-serif;
-				text-transform: none;
-			}
-			.ui5con-alignleft .slides section,
-			.ui5con-alignleft .slides section > section {
-				text-align: start;
-			}
-			.reveal code,
-			.reveal pre {
-				font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-			}
+	<script src="resources/sap/ui/webcomponents/main/bundle.esm.js" type="module"></script>
 
-			.ui5con-orange {
-				color: rgb(240, 171, 0);
-			}
-			.ui5con-title {
-				width: 48%;
-				text-align: start;
-				padding-left: 1%;
-				padding-top: 2%;
-				margin-left: 0;
-				font-size: 72px;
-				font-weight: bold;
-			}
-			.ui5con-speakertitle {
-				font-size: 30px;
-				text-align: start;
-				padding-left: 1%;
-				padding-top: 5%;
-			}
-			.ui5con-aligntop .ui5con-title {
-				padding-top: 20%;
-			}
-			.ui5con-logo {
-				width: 50%;
-				height: 100%;
-				position: absolute;
-				right: 2%;
-				top: 0;
-				background-image: url(images/UI5con.png);
-				background-repeat: no-repeat;
-				background-size: contain;
-			}
-			.ui5con-aligntop .ui5con-logo {
-				top: 44%;
-			}
-			h2.ui5con-divider {
-				text-align: start;
-				font-size: 92px;
-				padding-left: 2%;
-			}
-			.ui5con-aligntop h2.ui5con-divider {
-				padding-top: 23%;
-			}
-			.ui5con-thankyou {
-				font-size: 120px;
-				font-weight: bold;
-				text-align: start;
-				padding-left: 2%;
-			}
-			.ui5con-aligntop .ui5con-thankyou {
-				padding-top: 12%;
-			}
-			.ui5con-speakerdetails {
-				font-size: 36px;
-				text-align: start;
-				padding-top: 5%;
-				padding-left: 2%;
-			}
+	<style>
+		.reveal {
+			font-size: 58px;
+		}
 
-			.code-block__light {
-				background: #fff;
-				color: #333;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+		.reveal,
+		.reveal h1,
+		.reveal h2,
+		.reveal h3,
+		.reveal h4,
+		.reveal h5,
+		.reveal h6 {
+			font-family: Arial, Helvetica, sans-serif;
+			text-transform: none;
+		}
 
-				<!--  Slide #1 -->
+		.ui5con-alignleft .slides section,
+		.ui5con-alignleft .slides section>section {
+			text-align: start;
+		}
+
+		.reveal code,
+		.reveal pre {
+			font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+		}
+
+		.ui5con-orange {
+			color: rgb(240, 171, 0);
+		}
+
+		.ui5con-title {
+			width: 48%;
+			text-align: start;
+			padding-left: 1%;
+			padding-top: 2%;
+			margin-left: 0;
+			font-size: 72px;
+			font-weight: bold;
+		}
+
+		.ui5con-speakertitle {
+			font-size: 30px;
+			text-align: start;
+			padding-left: 1%;
+			padding-top: 5%;
+		}
+
+		.ui5con-aligntop .ui5con-title {
+			padding-top: 20%;
+		}
+
+		.ui5con-logo {
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			right: 2%;
+			top: 0;
+			background-image: url(images/UI5con.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		.ui5con-aligntop .ui5con-logo {
+			top: 44%;
+		}
+
+		h2.ui5con-divider {
+			text-align: start;
+			font-size: 92px;
+			padding-left: 2%;
+		}
+
+		.ui5con-aligntop h2.ui5con-divider {
+			padding-top: 23%;
+		}
+
+		.ui5con-thankyou {
+			font-size: 120px;
+			font-weight: bold;
+			text-align: start;
+			padding-left: 2%;
+		}
+
+		.ui5con-aligntop .ui5con-thankyou {
+			padding-top: 12%;
+		}
+
+		.ui5con-speakerdetails {
+			font-size: 36px;
+			text-align: start;
+			padding-top: 5%;
+			padding-left: 2%;
+		}
+
+		.demo-wrapper {
+			display: flex;
+			justify-content: center;
+		}
+
+		.demo-wrapper>div {
+			flex: 1;
+			padding: 100px;
+			box-sizing: border-box;
+		}
+
+		.sample-demo * {
+			font-size: 70% !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!--  Slide #1 -->
+			<section data-background-color="#000">
+				<div class="ui5con-title ui5con-left">
+					<div><span class="ui5con-orange">UI5</span> Web Components</div>
+				</div>
+				<div class="ui5con-logo"></div>
+
+				<div class="ui5con-speakertitle">
+					Ilhan Myumyun, SAP<br>
+					Martin Hristov, SAP<br>
+					June 28, 2019
+				</div>
+			</section>
+
+			<!--  Slide #1 What are Web Components? -->
+			<section>
 				<section data-background-color="#000">
-					<div class="ui5con-title ui5con-left">
-						<div><span class="ui5con-orange">UI5</span> Web Components</div>
-					</div>
-					<div class="ui5con-logo"></div>
-
-					<div class="ui5con-speakertitle">
-						Ilhan Myumyun, SAP<br>
-						Martin Hristov, SAP<br>
-						June 28, 2019			
-					</div>
+					<h2 class="ui5con-divider">Throw <span class="ui5con-orange">Back ...</span></h2>
 				</section>
 
-				<!--  Slide #1 What are Web Components? -->
 				<section>
-					<section data-background-color="#000">
-						<h2 class="ui5con-divider">Throw <span class="ui5con-orange">Back ...</span></h2>
-					</section>
-
-					<section>
-						<h2>UI5 Con 2017 ...</h2>
-						<img src="images/ui5con-2017.png" style="width: 80%; height: 50%"/>
-					</section>
-
-					<section>
-						<h2>UI5 Con 2018 ...</h2>
-						<img src="images/ui5con-2018.png" style="width: 80%; height: 50%"/>
-					</section>
-
-					<section>
-						<h2>UI5 Con 2019 ...</h2>
-						<img src="images/ui5con-2019.png" style="width: 80%; height: 50%"/>
-					</section>
+					<h2>UI5 Con 2017 ...</h2>
+					<img src="images/ui5con-2017.png" style="width: 80%; height: 50%" />
 				</section>
 
-				<!--  Slide #2 What are Web Components? -->
 				<section>
-					<section data-background-color="#000">
-						<h2 class="ui5con-divider">What are <span class="ui5con-orange">Web Components?</span></h2>
-					</section>
+					<h2>UI5 Con 2018 ...</h2>
+					<img src="images/ui5con-2018.png" style="width: 80%; height: 50%" />
+				</section>
 
-					<section>
-						<ul style="list-style: none;">
-							<li>Custom Elements</li>
-							<li>Shadow DOM</li>
-							<li>HTML Imports</li>
-							<li>Templates</li>
-						</ul>
-					</section>
+				<section>
+					<h2>UI5 Con 2019 ...</h2>
+					<img src="images/ui5con-2019.png" style="width: 80%; height: 50%" />
+				</section>
+			</section>
 
-					<section>
-						<h2>Custom Elements</h2>
-						<span>Create your own custom HTML Tags</span>
-						<br>
-						<br>
-						<pre><code data-trim>
+			<!--  Slide #2 What are Web Components? -->
+			<section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">What are <span class="ui5con-orange">Web Components?</span></h2>
+				</section>
+
+				<section>
+					<ul style="list-style: none;">
+						<li>Custom Elements</li>
+						<li>Shadow DOM</li>
+						<li>HTML Imports</li>
+						<li>Templates</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Custom Elements</h2>
+					<span>Create your own custom HTML Tags</span>
+					<br>
+					<br>
+					<pre><code data-trim>
 							class MyComponent extends HTMLElement {...}
 							window.customElements.define('my-component', MyComponent);
 
@@ -181,36 +206,36 @@
 								<span>UI5 Web Components</span>
 							</my-component>
 						</code></pre>
-					</section>
+				</section>
 
-					<section>
-						<h2>Shadow DOM</h2>
-						<span>Encapsulate styling, behaviour and representation</span>
-						<br>
-						<br>
-						<pre><code data-trim>
+				<section>
+					<h2>Shadow DOM</h2>
+					<span>Encapsulate styling, behaviour and representation</span>
+					<br>
+					<br>
+					<pre><code data-trim>
 									const shadow = this.createShadowRoot();
 
 									shadow.innerHTML = '<h1 style="color: red">Hello UI5 Con!</h1>';
 							</code></pre>
-					</section>
+				</section>
 
-					<section>
-						<h2>HTML Imports</h2>
-						<span>Package your elements and import them</span>
-						<br>
-						<br>
-						<pre><code data-trim>
+				<section>
+					<h2>HTML Imports</h2>
+					<span>Package your elements and import them</span>
+					<br>
+					<br>
+					<pre><code data-trim>
 							<link rel="import" href="myElement.html">
 						</code></pre>
-					</section>
+				</section>
 
-					<section>
-						<h2>Templates</h2>
-						<span>Reuse HTML blocks to define your dynamic parts in your application</span>
-						<br>
-						<br>
-						<pre><code data-trim>
+				<section>
+					<h2>Templates</h2>
+					<span>Reuse HTML blocks to define your dynamic parts in your application</span>
+					<br>
+					<br>
+					<pre><code data-trim>
 							<template>
 								<tr>
 									<td>Cell 1</td>
@@ -218,216 +243,328 @@
 								</tr>
 							</template>
 						</code></pre>
-					</section>
-
-					<section>
-						<img src="images/support.png"/>
-					</section>
-
-					<section>
-						<img src="images/standards.png"/>
-					</section>
-
-					<section>
-						<h3>More standards, Less frameworks</h3>
-						<img src="images/evo.png"/>
-					</section>
-
-					<section>
-						<h3>Web Components vs. Frameworks</h3>
-						<br>
-						<img src="images/wcAndFrameworks.png"/>
-					</section>
 				</section>
 
-				<!--  Slide #3 What are Web Components? -->
 				<section>
-					<section data-background-color="#000">
-							<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
-					</section>
-					<section >
-						<pre><code data-trim data-noescape class="code-block__light">
-							&lth2> Hello UI5 Con &lth2/>
-							&ltbutton> Press me &ltbutton/>
+					<img src="images/support.png" />
+				</section>
+
+				<section>
+					<img src="images/standards.png" />
+				</section>
+
+				<section>
+					<h3>More standards, Less frameworks</h3>
+					<img src="images/evo.png" />
+				</section>
+
+				<section>
+					<h3>Web Components vs. Frameworks</h3>
+					<br>
+					<img src="images/wcAndFrameworks.png" />
+				</section>
+			</section>
+
+			<!--  Slide #3 What are Web Components? -->
+			<section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
+				</section>
+				<section>
+
+					<h3>Native HTML Elements</h3>
+					<br>
+					<pre><code data-trim data-noescape>
+							&lth2>Hello UI5 Con&lt/h2>
+
+							&ltbutton>Press me&lt/button>
+
 							&ltul>
 								&ltli>Pineapple&lt/li>
 								&ltli>Apple&lt/li>
 								&ltli>Banana&lt/li>
 							&lt/ul>
 						</code></pre>
-					</section>
-					<section>
-						<pre><code data-trim data-noescape class="code-block__light">
-							&ltui5-title> Hello UI5 Con &ltui5-title/>
-							&ltui5-button> Hello UI5 Con &ltui5-button/>
+				</section>
+				<section>
+
+					<h3>Custom HTML Elements</h3>
+					<br>
+					<pre><code data-trim data-noescape>
+							&ltui5-title>Hello UI5 Con&lt/ui5-title>
+
+							&ltui5-button>Hello UI5 Con&lt/ui5-button>
+
 							&ltui5-list>
 								&ltui5-li>Pineapple&lt/ui5-li>
 								&ltui5-li>Apple&lt/ui5-li>
 								&ltui5-li>Banana&lt/ui5-li>
 							&lt/ui5-list>
 						</code></pre>
-					</section>
-
-					<section>	
-						<img src="images/html.png"/>
-						<img src="images/ui5.png"/>
-					</section>
-
-					<section>
-						<img src="images/api1.png"/>
-					</section>
-					<section>
-						<img src="images/api2.png"/>
-					</section>
-
-					<section>
-							<img src="images/whatAre.png"/>
-					</section>
-
-					<section>
-						<h3>Consumption Model</h3>
-						<img src="images/consumption.png"/>
-					</section>
-
-					<!-- <section>
-						<pre><code data-trim data-noescape class="code-block__light">npm install @ui5/webcomponents</code></pre>
-						<pre><code data-trim data-noescape class="code-block__light">import "@ui5/webcomponents/dist/Button";</code></pre>
-						<pre><code data-trim data-noescape class="code-block__light">&lt;ui5-button>Press me&lt;/ui5-button></code></pre>
-					</section> -->
 				</section>
-			</section>
 
 				<section>
-					<section data-background-color="#000">
-						<h2 class="ui5con-divider">Enterprise<span class="ui5con-orange"> Standards</span></h3>
-					</section>
-					<section>
-						<h3>Theming</h3>
-						<img src="images/themes.png"/>
-					</section>
-					<section>
-						<h3>Theming</h3>
-						<br>
-						<img src="images/theming4.png"/>
-					</section>
-					<section>
-						<h3>Theming</h3>
-						<img src="images/theming2.png"/>
-					</section>
-					<section>
-						<h3>Theming</h3>
-						<img src="images/theming3.png"/>
-					</section>
-					<section>
-						<h3>Accessibility</h3>
-					</section>
-					<section>
-						<h3>i18n</h3>
-						<img src="images/i18n.png"/>
-					</section>
 
-					<section>
-						<h3>RTL</h3>
-						<br>
-						<pre><code data-trim data-noescape>
+					<div class="demo-wrapper">
+
+						<div class="sample-demo">
+							<h2>Hello UI5 Con</h2>
+
+							<button style="font-size: 100%;">Press me</button>
+							<br>
+
+							<ul>
+								<li>Pineapple</li>
+								<li>Apple</li>
+								<li>Banana</li>
+							</ul>
+						</div>
+
+						<div class="sample-demo">
+							<ui5-title level="H1">Hello UI5 Con</ui5-title>
+
+							<ui5-button>Press me</ui5-button>
+
+							<br>
+
+							<ui5-list>
+								<ui5-li>Pineapple</ui5-li>
+								<ui5-li>Apple</ui5-li>
+								<ui5-li>Banana</ui5-li>
+							</ui5-list>
+						</div>
+					</div>
+
+				</section>
+
+				<section>
+					<pre><code data-trim data-noescape>
+							&ltui5-datepicker value="2019-06-28" id="dp">&lt/ui5-datepicker>
+						</code></pre>
+
+					<ui5-datepicker value="2019-06-28" id="dp" style="font-size: initial; width: 50%"></ui5-datepicker>
+
+					<br>
+					<br>
+
+					<script>
+						const datepicker = document.getElementById("dp");
+
+						datepicker.addEventListener('change', (event) => {
+							alert(event.target.value);
+						});
+					</script>
+
+					<pre><code data-trim data-noescape>
+							const datepicker = document.getElementById("dp");
+
+							console.log(datepicker.value); // 2019-06-28
+
+							datepicker.addEventListener('change', (event) => {
+								alert(event.target.value);
+							});
+
+							</code></pre>
+
+				</section>
+
+				<section>
+					<h3>Theming</h3>
+					<img src="images/theming4.png" />
+				</section>
+				<section>
+					<h3>Theming</h3>
+					<img src="images/theming2.png" />
+				</section>
+				<section>
+					<h3>Theming</h3>
+					<img src="images/theming3.png" />
+				</section>
+				<section>
+					<h3>Accessibility</h3>
+				</section>
+				<section>
+					<h3>i18n</h3>
+					<img src="images/i18n.png" />
+				</section>
+
+				<section>
+					<h3>RTL</h3>
+					<br>
+					<pre><code data-trim data-noescape>
 						&ltscript data-id="sap-ui-config" type="application/json">
 							{
 								rtl: true
 							}
 						&lt/script>
 						</code></pre>
-						<img src="images/rtl.png"/>
-					</section>
+					<img src="images/rtl.png" />
 				</section>
+			</section>
 
-				<section>
-					<section data-background-color="#000">
-						<h2 class="ui5con-divider">High Level <span class="ui5con-orange">Architecture</span></h2>
-					</section>
-					<section>
-						<img src="images/architecture.png"/>
-					</section>
-					<section>
-						<h3>Class Hierarchy</span></h3>
-						<br>
-						<img src="images/class.png"/>
-					</section>
-					<section>
-						<h3>Declarative Renderer</span></h3>
-						<img src="images/hbs.png"/>
-					</section>
-					<section>
-						<h3>Rendering</span></h3>
-						<img src="images/rendering.png"/>
-					</section>
-				</section>
-
-				<section>
-					<section data-background-color="#000">
-						<h2 class="ui5con-divider">Community<span class="ui5con-orange"> Feedback</span></h3>
-					</section>
-					<section>
-						<img src="images/feed1.png"/>
-					</section>
-					<section>
-						<img src="images/feedback.png"/>
-					</section>
-					<section>
-						<img src="images/feed2.png"/>
-					</section>
-					<section>
-						<img src="images/medium.png"/>
-						<img src="images/9libs.png"/>
-					</section>
-				</section>
-
-				<section>
-					<section data-background-color="#000">
-						<h2 class="ui5con-divider">2019<span class="ui5con-orange"> Roadmap</span></h3>
-					</section>
-					<section>
-						<img src="images/roadmap.png"/>
-					</section>
-				</section>
-
-				<!-- Thank you -->
+			<section>
 				<section data-background-color="#000">
-					<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
-					<div class="ui5con-logo"></div>
-					<div class="ui5con-speakerdetails">
-							Contact information:<br><br>
-							Ilhan Myumyun<br>
-							https://twitter.com/ilhanorhan007
-							Martin Hristov<br>
-							https://twitter.com/MartoHristov<br>
-							https://github.com/SAP/ui5-webcomponents
-					</div>
+					<h2 class="ui5con-divider">High Level <span class="ui5con-orange">Architecture</span></h2>
 				</section>
-			</div>
+				<section>
+					<img src="images/architecture.png" />
+				</section>
+				<section>
+					<h3>Class Hierarchy</span></h3>
+					<br>
+					<img src="images/class.png" />
+				</section>
+				<section>
+					<h3>Declarative Renderer</span></h3>
+					<img src="images/hbs.png" />
+				</section>
+				<section>
+					<h3>Rendering</span></h3>
+					<img src="images/rendering.png" />
+				</section>
+			</section>
+
+			<section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">Community<span class="ui5con-orange"> Feedback</span></h3>
+				</section>
+				<section>
+					<img src="images/feed1.png" />
+				</section>
+				<section>
+					<img src="images/feedback.png" />
+				</section>
+				<section>
+					<img src="images/feed2.png" />
+				</section>
+				<section>
+					<img src="images/medium.png" />
+					<img src="images/9libs.png" />
+				</section>
+			</section>
+
+			<section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">2019<span class="ui5con-orange"> Roadmap</span></h3>
+				</section>
+				<section>
+					<img src="images/roadmap.png" />
+				</section>
+			</section>
+
+			<!-- Thank you -->
+			<section data-background-color="#000">
+				<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
+				<div class="ui5con-logo"></div>
+				<div class="ui5con-speakerdetails">
+					Contact information:<br><br>
+					Ilhan Myumyun<br>
+					https://twitter.com/ilhanorhan007
+					Martin Hristov<br>
+					https://twitter.com/MartoHristov<br>
+					https://github.com/SAP/ui5-webcomponents
+				</div>
+			</section>
+
+			<section>
+				<h3>RTL</h3>
+			</section>
+			</section>
+
+			<section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">High Level <span class="ui5con-orange">Architecture</span></h2>
+				</section>
+				<section>
+					<img src="images/architecture.png" />
+				</section>
+				<section>
+					<h3>Class Hierarchy</span></h3>
+					<br>
+					<img src="images/class.png" />
+				</section>
+				<section>
+					<h3>Declarative Renderer</span></h3>
+					<img src="images/hbs.png" />
+				</section>
+				<section>
+					<h3>Rendering</span></h3>
+					<img src="images/rendering.png" />
+				</section>
+			</section>
+
+			<section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">Community<span class="ui5con-orange">Feedback</span></h3>
+				</section>
+				<section>
+					<img src="images/feed1.png" />
+				</section>
+				<section>
+					<img src="images/feedback.png" />
+				</section>
+				<section>
+					<img src="images/feed2.png" />
+				</section>
+				<section>
+					<img src="images/medium.png" />
+					<img src="images/9libs.png" />
+				</section>
+			</section>
+
+			<section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">2019<span class="ui5con-orange"> Roadmap</span></h3>
+				</section>
+				<section>
+					<img src="images/roadmap.png" />
+				</section>
+			</section>
+
+			<!-- Thank you -->
+			<section data-background-color="#000">
+				<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
+				<div class="ui5con-logo"></div>
+				<div class="ui5con-speakerdetails">
+					Contact information:<br><br>
+					Ilhan Myumyun<br>
+					Martin Hristov<br>
+					https://github.com/SAP/ui5-webcomponents<br>
+				</div>
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				slideNumber: true,
-				hash: true,
-				history: true,
-				width: 1920,
-				height: 1080,
-				center: true, // when changing to "false", add the CSS class "ui5con-aligntop" (and optionally ui5con-alignleft") to the body tag in the HTML
-				transition: 'convex',         // none/fade/slide/convex/concave/zoom
-				backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true,  }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			slideNumber: true,
+			hash: true,
+			history: true,
+			// width: 1920,
+			// height: 1080,
+
+			width: "100%",
+			height: "100%",
+			margin: 0,
+			minScale: 1,
+			maxScale: 1,
+
+			center: true, // when changing to "false", add the CSS class "ui5con-aligntop" (and optionally ui5con-alignleft") to the body tag in the HTML
+			transition: 'convex',         // none/fade/slide/convex/concave/zoom
+			backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, }
+			]
+		});
+	</script>
+</body>
+
 </html>
