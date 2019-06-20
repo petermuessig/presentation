@@ -431,24 +431,24 @@
 
 							<br>
 
-							<ui5-button>UI5</ui5-button>
-							<ui5-button type="Positive">Web</ui5-button>
-							<ui5-button type="Negative">Components</ui5-button>
+							<ui5-button design="Emphasized">UI5</ui5-button>
+							<ui5-button design="Positive">Web</ui5-button>
+							<ui5-button design="Negative">Components</ui5-button>
 
 							<br>
 
 							<ui5-switch></ui5-switch>
-							<ui5-switch type="Graphical"></ui5-switch>
-							<ui5-switch type="Graphical" checked></ui5-switch>
+							<ui5-switch graphical></ui5-switch>
+							<ui5-switch graphical checked></ui5-switch>
 
 							<br>
 
 							<ui5-card heading="Project Cloud Transformation" subtitle="Revenue per Product | EUR" status="3 of 3"
 								class="small">
 								<ui5-list separators="Inner" class="content-padding">
-									<ui5-li style="text-align: left" icon="sap-icon://competitor">Personal Development</ui5-li>
-									<ui5-li style="text-align: left" icon="sap-icon://wallet">Finance</ui5-li>
-									<ui5-li style="text-align: left" icon="sap-icon://collaborate">Communications Skills</ui5-li>
+									<ui5-li info="Available" info-state="Success" style="text-align: left" icon="sap-icon://competitor">Personal Development</ui5-li>
+									<ui5-li info="Re-Stock" info-state="Warning" style="text-align: left" icon="sap-icon://wallet">Finance</ui5-li>
+									<ui5-li info="Expired" info-state="Error" style="text-align: left" icon="sap-icon://collaborate">Communications Skills</ui5-li>
 								</ui5-list>
 							</ui5-card>
 
@@ -480,11 +480,86 @@
 						<li>Static styles in Shadow DOM</li>
 						<li>Constructable Stylesheets</li>
 					</ul>
+
 				</section>
 				<section>
-					<h3>Theming</h3>
-					<img src="images/theming3.png" />
+					<h3>Theming - Custom Styling</h3>
+					<br>
+					<ul>
+						<li>Adding styles on root</li>
+						<li>Styling parts</li>
+						<li>Setting CSS properties</li>
+					</ul>
 				</section>
+
+				<section>
+						<h3>Adding Style / Class attribute</h3>
+						<br>
+						<pre><code data-trim data-noescape>
+							&ltui5-badge>Hello UI5 Con&lt/ui5-badge>
+						</code></pre>
+
+						<ui5-badge style="height: 3rem; width: 30%;">Hello UI5 Con</ui5-badge>
+
+						<pre><code data-trim data-noescape>
+								&ltui5-badge style="border: 2px solid red; color: blue;">Hello UI5 Con&lt/ui5-badge>
+							</code></pre>
+
+					<ui5-badge style="height: 3rem; width: 30%;border: 2px solid red; color: blue;">Hello UI5 Con</ui5-badge>
+				</section>
+
+				<section>
+						<h3>Styling parts</h3>
+						<br>
+
+						<pre><code data-trim data-noescape>
+							&ltstyle>
+								#my-card::part(status) {
+									color: red;
+									font-size: 2rem;
+								}
+							&lt/style>
+						</code></pre>
+
+						<br>
+						<ui5-card style="width: 30%" id="my-card" heading="Project Cloud Transformation" subtitle="Revenue per Product | EUR" status="3 of 3"
+							class="small">
+							<ui5-list separators="Inner" class="content-padding">
+								<ui5-li info="Available" info-state="Success" style="text-align: left" icon="sap-icon://competitor">Personal Development</ui5-li>
+								<ui5-li info="Re-Stock" info-state="Warning" style="text-align: left" icon="sap-icon://wallet">Finance</ui5-li>
+								<ui5-li info="Expired" info-state="Error" style="text-align: left" icon="sap-icon://collaborate">Communications Skills</ui5-li>
+							</ui5-list>
+						</ui5-card>
+
+						<style>
+							#my-card::part(status) {
+								color: red;
+								font-size: 2rem;
+							}
+						</style>
+
+				</section>
+
+				<section>
+					<h3>Setting CSS properties</h3>
+					<br>
+					<ui5-panel id="my-panel" style="--ui5-panel-background-color: yellow;; font-size: initial; width: 30%; display: inline-block; border: 1px solid black;">
+						<ui5-messagestrip>Hello UI5 Con !!!</ui5-messagestrip>
+
+						<br>
+						<br>
+
+						<ui5-button>I am filling some content</ui5-button>
+					</ui5-panel>
+
+					<br>
+				
+					<pre><code data-trim data-noescape>
+						--ui5-panel-background-color: yellow;
+					</code></pre>
+
+				</section>
+
 				<section>
 				<h3>Accessibility</h3>
 				<br>
