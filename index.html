@@ -519,6 +519,10 @@
 									font-size: 2rem;
 								}
 							&lt/style>
+
+							&ltui5-card id="my-card">
+								...
+							&lt/ui5-card>
 						</code></pre>
 
 						<br>
@@ -543,7 +547,21 @@
 				<section>
 					<h3>Setting CSS properties</h3>
 					<br>
-					<ui5-panel id="my-panel" style="--ui5-panel-background-color: yellow;; font-size: initial; width: 30%; display: inline-block; border: 1px solid black;">
+
+					<pre><code data-trim data-noescape>
+						&ltstyle>
+							#my-panel {
+								--ui5-panel-background-color: yellow;
+							}
+						&lt/style>
+
+						&ltui5-panel id="my-panel">
+							...
+						&lt/ui5-panel>
+						</code></pre>
+
+					<br>
+					<ui5-panel id="my-panel" style="--ui5-panel-background-color: yellow; font-size: initial; width: 30%; display: inline-block; border: 1px solid black;">
 						<ui5-messagestrip>Hello UI5 Con !!!</ui5-messagestrip>
 
 						<br>
@@ -551,12 +569,6 @@
 
 						<ui5-button>I am filling some content</ui5-button>
 					</ui5-panel>
-
-					<br>
-				
-					<pre><code data-trim data-noescape>
-						--ui5-panel-background-color: yellow;
-					</code></pre>
 
 				</section>
 
