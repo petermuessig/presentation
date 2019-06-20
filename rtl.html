@@ -6,23 +6,16 @@
 
 	<script
 		src="resources/sap/ui/webcomponents/main/bundle.esm.js"
-		type="module"
+		type="module" 
 	></script>
 
 	<script data-id="sap-ui-config" type="application/json">
 		{
-			"rtl": true
+			"language": "he"
 		}
 	</script>
 </head>
-<body>
-	<ui5-list separators="None" dir="rtl" >
-		<ui5-li description="Aisle 23, Section 23">Soap Bars</ui5-li>
-		<ui5-li description="Aisle 23, Section 05">Broccoli</ui5-li>
-	</ui5-list>
-	<ui5-list separators="None" dir="rtl" mode="SingleSelectBegin">
-		<ui5-li icon="sap-icon://nutrition-activity" description="Aisle 23, Section 23" info="Available" info-state="Success">Soap Bars</ui5-li>
-		<ui5-li icon="sap-icon://nutrition-activity" description="Aisle 23, Section 24" info="Re-stock" info-state="Error">Lettuce</ui5-li>
-	</ui5-list>
+<body dir="rtl">
+	<ui5-datepicker></ui5-datepicker>
 </body>
 </html>
