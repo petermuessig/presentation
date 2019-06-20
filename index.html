@@ -11,6 +11,10 @@
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/white.css">
 
+	<!-- <script>
+		delete Document.prototype.adoptedStyleSheets
+	</script> -->
+
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -125,20 +129,28 @@
 		}
 
 		.demo-wrapper>div {
-			flex: 1;
-			padding: 100px;
+			width: 50%;
+			padding: 32px;
 			box-sizing: border-box;
 		}
 
-		.sample-demo * {
+		.has-html * {
 			font-size: 70% !important;
+		}
+
+		.initial-font-size {
+			font-size: initial
+		}
+
+		.fullscreen-image-slide {
+			width: 80%;
 		}
 	</style>
 </head>
 
 <body>
 	<div class="reveal">
-		<div class="slides">
+		<div class="slides" style="background: var(--sapShell_Background);">
 
 			<!--  Slide #1 -->
 			<section data-background-color="#000">
@@ -265,17 +277,17 @@
 				</section>
 			</section>
 
-			<!--  Slide #3 What are Web Components? -->
-			<section>
-					<section data-background-color="#000">
-						<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
-					</section>
+			<!--  Slide #3 What are UI 5Web Components? -->
+			 <section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
+				</section>
 
-					<section>
+				<section>
 
-						<h3>Native HTML Elements</h3>
-						<br>
-						<pre><code data-trim data-noescape>
+					<h3>Native HTML Elements</h3>
+					<br>
+					<pre><code data-trim data-noescape>
 								&lth2>Hello UI5 Con&lt/h2>
 
 								&ltbutton>Press me&lt/button>
@@ -286,13 +298,13 @@
 									&ltli>Banana&lt/li>
 								&lt/ul>
 							</code></pre>
-					</section>
+				</section>
 
-					<section>
+				<section>
 
-						<h3>Custom HTML Elements</h3>
-						<br>
-						<pre><code data-trim data-noescape>
+					<h3>Custom HTML Elements</h3>
+					<br>
+					<pre><code data-trim data-noescape>
 								&ltui5-title>Hello UI5 Con&lt/ui5-title>
 
 								&ltui5-button>Hello UI5 Con&lt/ui5-button>
@@ -303,48 +315,44 @@
 									&ltui5-li>Banana&lt/ui5-li>
 								&lt/ui5-list>
 							</code></pre>
-					</section>
+				</section>
 
-					<section>
+				<section>
+					<div class="demo-wrapper">
+						<div class="sample-demo has-html">
+							<h2>Hello UI5 Con</h2>
 
-						<div class="demo-wrapper">
+							<button style="font-size: 100%;">Press me</button>
+							<br>
 
-							<div class="sample-demo">
-								<h2>Hello UI5 Con</h2>
-
-								<button style="font-size: 100%;">Press me</button>
-								<br>
-
-								<ul>
-									<li>Pineapple</li>
-									<li>Apple</li>
-									<li>Banana</li>
-								</ul>
-							</div>
-
-							<div class="sample-demo">
-								<ui5-title level="H1">Hello UI5 Con</ui5-title>
-
-								<ui5-button>Press me</ui5-button>
-
-								<br>
-
-								<ui5-list style="text-align: left;">
-									<ui5-li>Pineapple</ui5-li>
-									<ui5-li>Apple</ui5-li>
-									<ui5-li>Banana</ui5-li>
-								</ui5-list>
-							</div>
+							<ul>
+								<li>Pineapple</li>
+								<li>Apple</li>
+								<li>Banana</li>
+							</ul>
 						</div>
 
-					</section>
+						<div class="sample-demo">
+							<ui5-title level="H1">Hello UI5 Con</ui5-title>
 
-					<section>
-						<pre><code data-trim data-noescape>
-								&ltui5-datepicker value="2019-06-28" id="dp">&lt/ui5-datepicker>
-						</code></pre>
+							<ui5-button>Press me</ui5-button>
+							<ui5-list>
+								<ui5-li style="text-align: initial">Pineapple</ui5-li>
+								<ui5-li style="text-align: initial">Apple</ui5-li>
+								<ui5-li style="text-align: initial">Banana</ui5-li>
+							</ui5-list>
+						</div>
+					</div>
+				</section>
+				<section>
 
-						<ui5-datepicker value="2019-06-28" id="dp" style="font-size: initial; width: 50%"></ui5-datepicker>
+					<h3>Eventing</h3>
+					<br>
+					<pre><code data-trim data-noescape>
+							&ltui5-datepicker value="2019-06-28" id="dp">&lt/ui5-datepicker>
+					</code></pre>
+
+					<ui5-datepicker value="2019-06-28" id="dp" style="font-size: initial; width: 30%"></ui5-datepicker>
 
 						<br>
 						<br>
@@ -353,185 +361,273 @@
 							const datepicker = document.getElementById("dp");
 
 							datepicker.addEventListener('change', (event) => {
-								alert(event.target.value);
+								alert(`Selected date is: ${event.target.value}`);
 							});
 						</script>
 
 						<pre><code data-trim data-noescape>
-								const datepicker = document.getElementById("dp");
+										const datepicker = document.getElementById("dp");
 
-								console.log(datepicker.value); // 2019-06-28
+										console.log(datepicker.value); // 2019-06-28
 
-								datepicker.addEventListener('change', (event) => {
-									alert(event.target.value);
-								});
-						</code></pre>
-
+										datepicker.addEventListener('change', (event) => {
+											alert(event.target.value);
+										});
+								</code></pre>
+						</section>
 					</section>
+
+		<section>
+			<section data-background-color="#000">
+				<h2 class="ui5con-divider">Enterprise<span class="ui5con-orange"> standards</span></h2>
+			</section>
+
+			<section>
+					<h3>Theming - Global configuration</h3>
+					<br>
+					<pre><code data-trim data-noescape>
+						&ltscript data-id="sap-ui-config" type="application/json">
+							{
+								"theme": "sap_belize_hcb" // sap_belize, sap_fiori_3
+							}
+						&lt/script>
+					</code></pre>
 				</section>
 
 				<section>
-					<section data-background-color="#000">
-						<h2 class="ui5con-divider">Enterprise<span class="ui5con-orange"> standards</span></h2>
-					</section>
+					<img class="fullscreen-image-slide" src="images/app-belize.png" />
+				</section>
 
-					<section>
-						<h3>Theming</h3>
-						<img src="images/theming4.png" />
-					</section>
+				<section>
+					<img class="fullscreen-image-slide" src="images/app-belize-hcb.png" />
+				</section>
 
-					<section>
-						<h3>Theming</h3>
-						<img src="images/theming2.png" />
-					</section>
+				<section>
+					<img class="fullscreen-image-slide" src="images/app-fiori-3.png" />
+				</section>
 
-					<section>
-						<h3>Theming</h3>
-						<img src="images/theming3.png" />
-					</section>
 
-					<section style="text-align: center;">
-						<h3>Accessibility</h3>
-						<br>
-						<div style="justify-content: center; width: 50%; font-size: 1rem; margin: 0 auto;">
-							<ui5-tabcontainer collapsed fixed show-overflow style="margin-bottom: 1rem;">
-									<ui5-tab text="The" selected></ui5-tab>
-									<ui5-tab text="UI5" ></ui5-tab>
-									<ui5-tab text="Web"></ui5-tab>
-									<ui5-tab text="Components"></ui5-tab>
-									<ui5-tab text="Are"></ui5-tab>
-									<ui5-tab text="Here"></ui5-tab>
-									<ui5-tab text="And"></ui5-tab>
-									<ui5-tab text="They"></ui5-tab>
-									<ui5-tab text="Are"></ui5-tab>
-									<ui5-tab text="Accessible"></ui5-tab>
-									<ui5-tab text="Contacts"></ui5-tab>
-									<ui5-tab text="Tab1"></ui5-tab>
-									<ui5-tab text="Tab2"></ui5-tab>
-									<ui5-tab text="Tab3"></ui5-tab>
-									<ui5-tab text="Tab4"></ui5-tab>
-									<ui5-tab text="Tab5"></ui5-tab>
-									<ui5-tab text="Tab6"></ui5-tab>
-							</ui5-tabcontainer>
+				<section>
+					<h3 style="color: var(--sapUiButtonTextColor);">Theming - Dynamic switch</h3>
+					<br>
 
-							<div style="display: flex;flex-direction: row; justify-content:space-between; margin-bottom: 1rem;">
-								<ui5-checkbox text="I agree"></ui5-checkbox>
-								<ui5-button disabled>Disabled</ui5-button>
-								<ui5-datepicker style="width: 300px; margin-bottom: 1rem;"">
+					<pre><code data-trim data-noescape>
+							import { setTheme } from "@ui5/webcomponents-base/Theming";
+
+							setTheme("sap_belize"); // sap_fiori_3, sap_belize_hcb
+							</code></pre>
+
+					<div style="background: var(--sapShell_Background); display: flex; justify-content: center">
+
+						<div style="background: var(--sapShell_Background); width: 60%;">
+
+							<div id="theming-buttons-wrapper">
+								<ui5-radiobutton text="Quartz" selected name="theming"></ui5-radiobutton>
+								<ui5-radiobutton text="Belize" name="theming" value-state="Warning"></ui5-radiobutton>
+								<ui5-radiobutton text="HCB" name="theming" value-state='Error'></ui5-radiobutton>
+							</div>
+
+							<ui5-datepicker class="initial-font-size" style="width: 40%"></ui5-datepicker>
+
+							<br>
+
+							<ui5-button>UI5</ui5-button>
+							<ui5-button type="Positive">Web</ui5-button>
+							<ui5-button type="Negative">Components</ui5-button>
+
+							<br>
+
+							<ui5-switch></ui5-switch>
+							<ui5-switch type="Graphical"></ui5-switch>
+							<ui5-switch type="Graphical" checked></ui5-switch>
+
+							<br>
+
+							<ui5-card heading="Project Cloud Transformation" subtitle="Revenue per Product | EUR" status="3 of 3"
+								class="small">
+								<ui5-list separators="Inner" class="content-padding">
+									<ui5-li style="text-align: left" icon="sap-icon://competitor">Personal Development</ui5-li>
+									<ui5-li style="text-align: left" icon="sap-icon://wallet">Finance</ui5-li>
+									<ui5-li style="text-align: left" icon="sap-icon://collaborate">Communications Skills</ui5-li>
+								</ui5-list>
+							</ui5-card>
+
+							<script>
+								const wrapper = document.getElementById("theming-buttons-wrapper");
+
+								wrapper.addEventListener('select', event => {
+									const button = event.target;
+									const themeMapping = {
+										"Quartz": "sap_fiori_3",
+										"Belize": "sap_belize",
+										"HCB": "sap_belize_hcb",
+									};
+
+									window["sap-ui-webcomponents-main-bundle"].Theming.setTheme(themeMapping[button.text]);
+								});
+							</script>
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<h3>Theming - How is it so cool?</h3>
+
+					<br>
+					<ul>
+						<li>CSS Custom Properties</li>
+						<li>Static styles in Shadow DOM</li>
+						<li>Constructable Stylesheets</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Theming</h3>
+					<img src="images/theming3.png" />
+				</section>
+				<section>
+				<h3>Accessibility</h3>
+				<br>
+				<div style="justify-content: center; width: 50%; font-size: 1rem; margin: 0 auto;">
+					<ui5-tabcontainer collapsed fixed show-overflow style="margin-bottom: 1rem;">
+						<ui5-tab text="The" selected></ui5-tab>
+						<ui5-tab text="UI5"></ui5-tab>
+						<ui5-tab text="Web"></ui5-tab>
+						<ui5-tab text="Components"></ui5-tab>
+						<ui5-tab text="Are"></ui5-tab>
+						<ui5-tab text="Here"></ui5-tab>
+						<ui5-tab text="And"></ui5-tab>
+						<ui5-tab text="They"></ui5-tab>
+						<ui5-tab text="Are"></ui5-tab>
+						<ui5-tab text="Accessible"></ui5-tab>
+						<ui5-tab text="Contacts"></ui5-tab>
+						<ui5-tab text="Tab1"></ui5-tab>
+						<ui5-tab text="Tab2"></ui5-tab>
+						<ui5-tab text="Tab3"></ui5-tab>
+						<ui5-tab text="Tab4"></ui5-tab>
+						<ui5-tab text="Tab5"></ui5-tab>
+						<ui5-tab text="Tab6"></ui5-tab>
+					</ui5-tabcontainer>
+
+					<div style="display: flex;flex-direction: row; justify-content:space-between; margin-bottom: 1rem;">
+						<ui5-checkbox text="I agree"></ui5-checkbox>
+						<ui5-button disabled>Disabled</ui5-button>
+						<ui5-datepicker style="width: 300px; margin-bottom: 1rem;"">
 								</ui5-datepicker>
 							</div>
-							<div style="display: flex;flex-direction: row; justify-content: space-between">
-								<ui5-card  heading="Team Space" subtitle="Direct Reports" status="3 of 10" style="width: 40%;">
-									<div class="card-content">
-										<ui5-list separators="None" class="card-content-child" style="width: 100%;text-align: left;">
-											<ui5-li description="User Researcher">Alain Chevalier</ui5-li>
-											<ui5-li description="Artist">Monique Legrand</ui5-li>
-											<ui5-li description="UX Specialist" selected>Michael Adams</ui5-li>
-										</ui5-list>
-									</div>
-								</ui5-card>
-								<br>
-								<ui5-card  heading="This header is interactive" header-interactive subtitle="Click, press Enter or Space" status="3 of 6" style="width: 40%;">
-									<div class="card-content">
-										<ui5-list separators="None" class="card-content-child" style="width: 100%;text-align: left;">
-											<ui5-li description="Software Architect">Richard Wilson</ui5-li>
-											<ui5-li description="Visual Designer" selected>Elena Petrova</ui5-li>
-											<ui5-li description="Quality Specialist">John Miller</ui5-li>
-										</ui5-list>
-									</div>
-								</ui5-card>
-							</div>
-						</div>
-					</section>
+							<div style=" display: flex;flex-direction: row; justify-content: space-between">
+							<ui5-card heading="Team Space" subtitle="Direct Reports" status="3 of 10" style="width: 40%;">
+								<div class="card-content">
+									<ui5-list separators="None" class="card-content-child" style="width: 100%;text-align: left;">
+										<ui5-li description="User Researcher">Alain Chevalier</ui5-li>
+										<ui5-li description="Artist">Monique Legrand</ui5-li>
+										<ui5-li description="UX Specialist" selected>Michael Adams</ui5-li>
+									</ui5-list>
+								</div>
+							</ui5-card>
+							<br>
+							<ui5-card heading="This header is interactive" header-interactive subtitle="Click, press Enter or Space"
+								status="3 of 6" style="width: 40%;">
+								<div class="card-content">
+									<ui5-list separators="None" class="card-content-child" style="width: 100%;text-align: left;">
+										<ui5-li description="Software Architect">Richard Wilson</ui5-li>
+										<ui5-li description="Visual Designer" selected>Elena Petrova</ui5-li>
+										<ui5-li description="Quality Specialist">John Miller</ui5-li>
+									</ui5-list>
+								</div>
+							</ui5-card>
+					</div>
+				</div>
+			</section>
 
-					<section>
-						<h3>i18n <span style="font-size:0.5em">(40+ languages)</span></h3>
-						<br>
-						<pre style="width: 40%;"><code style="font-size:0.5em" data-trim data-noescape>
+			<section>
+				<h3>i18n <span style="font-size:0.5em">(40+ languages)</span></h3>
+				<br>
+				<pre style="width: 40%;"><code style="font-size:0.5em" data-trim data-noescape>
 							&ltscript data-id="sap-ui-config" type="application/json">
 							{
 								language: "de"
 							}
 							&lt/script>
 						</code></pre>
-						<iframe style="width: 40%; height:400px" src="./language.html"></iframe>
-					</section>
+				<iframe style="width: 40%; height:400px" src="./language.html"></iframe>
+			</section>
 
-					<section>
-						<h3>RTL</h3>
-						<pre style="width: 40%;"><code style="font-size:0.5em" data-trim data-noescape>
+			<section>
+				<h3>RTL</h3>
+				<pre style="width: 40%;"><code style="font-size:0.5em" data-trim data-noescape>
 							&ltscript data-id="sap-ui-config" type="application/json">
 								{
 									"rtl": true
 								}
 							&lt/script>
 							</code></pre>
-							<iframe style="width: 40%; height:400px" src="./rtl.html"></iframe>
-					</section>
-				</section>
-
-			<section>
-				<section data-background-color="#000">
-					<h2 class="ui5con-divider">High Level <span class="ui5con-orange">Architecture</span></h2>
-				</section>
-				<section>
-					<img src="images/architecture.png" />
-				</section>
-				<section>
-					<h3>Class Hierarchy</span></h3>
-					<br>
-					<img src="images/class.png" />
-				</section>
-				<section>
-					<h3>Declarative Renderer</span></h3>
-					<img src="images/hbs.png" />
-				</section>
-				<section>
-					<h3>Rendering</span></h3>
-					<img src="images/rendering.png" />
-				</section>
+				<iframe style="width: 40%; height:400px" src="./rtl.html"></iframe>
 			</section>
+		</section>
 
-			<section>
-				<section data-background-color="#000">
-					<h2 class="ui5con-divider">Community<span class="ui5con-orange"> Feedback</span></h3>
-				</section>
-				<section>
-					<img src="images/feed1.png" />
-				</section>
-				<section>
-					<img src="images/feedback.png" />
-				</section>
-				<section>
-					<img src="images/feed2.png" />
-				</section>
-				<section>
-					<img src="images/medium.png" />
-					<img src="images/9libs.png" />
-				</section>
-			</section>
-
-			<section>
-				<section data-background-color="#000">
-					<h2 class="ui5con-divider">2019<span class="ui5con-orange"> Roadmap</span></h3>
-				</section>
-				<section>
-					<img src="images/roadmap.png" />
-				</section>
-			</section>
-
-			<!-- Thank you -->
+		<section>
 			<section data-background-color="#000">
-				<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
-				<div class="ui5con-logo"></div>
-				<div class="ui5con-speakerdetails">
-					Contact information:<br><br>
-					Ilhan Myumyun<br>
-					Martin Hristov<br>
-					https://github.com/SAP/ui5-webcomponents<br>
-				</div>
+				<h2 class="ui5con-divider">High Level <span class="ui5con-orange">Architecture</span></h2>
 			</section>
-		</div>
+			<section>
+				<img src="images/architecture.png" />
+			</section>
+			<section>
+				<h3>Class Hierarchy</span></h3>
+				<br>
+				<img src="images/class.png" />
+			</section>
+			<section>
+				<h3>Declarative Renderer</span></h3>
+				<img src="images/hbs.png" />
+			</section>
+			<section>
+				<h3>Rendering</span></h3>
+				<img src="images/rendering.png" />
+			</section>
+		</section>
+
+		<section>
+			<section data-background-color="#000">
+				<h2 class="ui5con-divider">Community<span class="ui5con-orange"> Feedback</span></h3>
+			</section>
+			<section>
+				<img src="images/feed1.png" />
+			</section>
+			<section>
+				<img src="images/feedback.png" />
+			</section>
+			<section>
+				<img src="images/feed2.png" />
+			</section>
+			<section>
+				<img src="images/medium.png" />
+				<img src="images/9libs.png" />
+			</section>
+		</section>
+
+		<section>
+			<section data-background-color="#000">
+				<h2 class="ui5con-divider">2019<span class="ui5con-orange"> Roadmap</span></h3>
+			</section>
+			<section>
+				<img src="images/roadmap.png" />
+			</section>
+		</section>
+
+		<!-- Thank you -->
+		<section data-background-color="#000">
+			<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
+			<div class="ui5con-logo"></div>
+			<div class="ui5con-speakerdetails">
+				Contact information:<br><br>
+				Ilhan Myumyun<br>
+				Martin Hristov<br>
+				https://github.com/SAP/ui5-webcomponents<br>
+			</div>
+		</section>
+	</div>
 	</div>
 
 	<script src="js/reveal.js"></script>
@@ -549,6 +645,8 @@
 
 			width: "100%",
 			height: "100%",
+			// keyboard: false,
+
 			margin: 0,
 			minScale: 1,
 			maxScale: 1,
