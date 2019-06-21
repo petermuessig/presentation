@@ -166,7 +166,7 @@
 				</div>
 			</section>
 
-			<!--  Slide #1 What are Web Components? -->
+			<!--  Slide #1 Throw back... -->
 			<section>
 				<section data-background-color="#000">
 					<h2 class="ui5con-divider">Throw <span class="ui5con-orange">Back ...</span></h2>
@@ -344,6 +344,7 @@
 						</div>
 					</div>
 				</section>
+
 				<section>
 
 					<h3>Eventing</h3>
@@ -366,16 +367,20 @@
 						</script>
 
 						<pre><code data-trim data-noescape>
-										const datepicker = document.getElementById("dp");
+								const datepicker = document.getElementById("dp");
 
-										console.log(datepicker.value); // 2019-06-28
+								console.log(datepicker.value); // 2019-06-28
 
-										datepicker.addEventListener('change', (event) => {
-											alert(event.target.value);
-										});
-								</code></pre>
-						</section>
+								datepicker.addEventListener('change', (event) => {
+									alert(event.target.value);
+								});
+						</code></pre>
 					</section>
+
+					<section>
+						<img src="./images/whatAre.png" />
+					</section>
+				</section>
 
 		<section>
 			<section data-background-color="#000">
@@ -630,11 +635,11 @@
 							</ui5-card>
 					</div>
 				</div>
+				<div style="height: 200px"></div>
 			</section>
 
 			<section>
 				<h3>i18n <span style="font-size:0.5em">(40+ languages)</span></h3>
-				<br>
 				<pre style="width: 40%;"><code style="font-size:0.5em" data-trim data-noescape>
 							&ltscript data-id="sap-ui-config" type="application/json">
 							{
@@ -642,24 +647,23 @@
 							}
 							&lt/script>
 						</code></pre>
-				<iframe style="width: 40%; height:400px" src="./language.html"></iframe>
+				<iframe style="width: 40%; height:500px;" src="./language.html"></iframe>
 			</section>
 
 			<section>
 				<h3>RTL</h3>
-				<br>
-				<br>
 				<pre style="width: 40%;"><code style="font-size:0.5em" data-trim data-noescape>
 					&ltscript data-id="sap-ui-config" type="application/json">
-						{
-							"rtl": true
-						}
+					{
+						"rtl": true
+					}
 					&lt/script>
-					</code></pre>
+				</code></pre>
+				<div style="height: 500px"></div>
 			</section>
 
 			<section>
-				<img src="./images/app-rtl.png" />
+				<img style="width: 80%;" src="./images/app-rtl.png" />
 			</section>
 
 			<section>
@@ -673,7 +677,7 @@
 						}
 					&lt/script>
 				</code></pre>
-				<iframe style="width: 40%; height:400px" src="./rtl.html"></iframe>
+				<iframe style="width: 40%; height:500px;" src="./rtl.html"></iframe>
 			</section>
 		</section>
 
