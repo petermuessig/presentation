@@ -277,7 +277,7 @@
 				</section>
 			</section>
 
-			<!--  Slide #3 What are UI 5Web Components? -->
+			<!--  Slide #3 What are UI5 Web Components? -->
 			 <section>
 				<section data-background-color="#000">
 					<h2 class="ui5con-divider">What are <span class="ui5con-orange">UI5 Web Components?</span></h2>
@@ -341,25 +341,45 @@
 								<ui5-li style="text-align: initial">Apple</ui5-li>
 								<ui5-li style="text-align: initial">Banana</ui5-li>
 							</ui5-list>
+							<br>
+							<br>
 						</div>
 					</div>
 				</section>
 
 				<section>
+						<pre><code data-trim data-noescape>
+							const TodoItem = ({todo}) => {
+								return &ltui5-li key={todo.key}> {todo.text} &lt/ui5-li>;
+							};
+						</code></pre>
+
+						<pre><code data-trim data-noescape>
+							const TodoList = ({todos}) => {
+								return &ltui5-list>
+									{todos.map(todo => &ltTodoItem todo={todo}/>)}
+								&lt/ui5-list>
+							};
+						</code></pre>
+
+						
+				</section>
+					
+				<section>
 
 					<h3>Eventing</h3>
 					<br>
 					<pre><code data-trim data-noescape>
-							&ltui5-datepicker value="2019-06-28" id="dp">&lt/ui5-datepicker>
+							&ltui5-datepicker value="2019-06-28" id="myPicker">&lt/ui5-datepicker>
 					</code></pre>
 
-					<ui5-datepicker value="2019-06-28" id="dp" style="font-size: initial; width: 30%"></ui5-datepicker>
+					<ui5-datepicker value="2019-06-28" id="myPicker" style="font-size: initial; width: 30%"></ui5-datepicker>
 
 						<br>
 						<br>
 
 						<script>
-							const datepicker = document.getElementById("dp");
+							const datepicker = document.getElementById("myPicker");
 
 							datepicker.addEventListener('change', (event) => {
 								alert(`Selected date is: ${event.target.value}`);
@@ -367,13 +387,23 @@
 						</script>
 
 						<pre><code data-trim data-noescape>
-								const datepicker = document.getElementById("dp");
+								const datepicker = document.getElementById("myPicker");
 
 								console.log(datepicker.value); // 2019-06-28
 
 								datepicker.addEventListener('change', (event) => {
 									alert(event.target.value);
 								});
+						</code></pre>
+					</section>
+
+					<section>
+						<pre><code data-trim data-noescape>
+							&ltui5-datepicker value="2019-06-28" id="myPicker">&lt/ui5-datepicker>
+						</code></pre>
+						<img src="./images/api.png" />
+						<pre><code data-trim data-noescape>
+							document.getElementById("myPicker").value
 						</code></pre>
 					</section>
 
@@ -694,8 +724,21 @@
 				<img src="images/class.png" />
 			</section>
 			<section>
-				<h3>Declarative Renderer</span></h3>
-				<img src="images/hbs.png" />
+				<h3>Declarative Renderer</h3>
+				<pre><code data-trim data-noescape>
+					&ltbutton type="button"
+						class="{{classes.main}}"
+						?disabled="{{disabled}}"
+						>
+						&ltui5-icon class="{{classes.icon}}" src="{{icon}}">&lt/ui5-icon>
+
+						&ltspan class="{{classes.text}}">
+							&ltbdi>&ltslot>&lt/slot>&lt/bdi>
+						&lt/span>
+					&lt/button>
+				</code></pre>
+	
+				<!-- <img src="images/hbs.png" /> -->
 			</section>
 			<section>
 				<h3>Rendering</span></h3>
@@ -742,13 +785,29 @@
 
 			<section>
 				<h3 class="ui5con-divider">Playground</h3>
+				<img src="images/ui5con-2019.png" />
 			</section>
 
 			<section>
 				<h3 class="ui5con-divider">Reference apps</h3>
+				<br>
+				<div style="width: 80%; margin: 0 auto;">
+					<div style="display: flex; justify-content: space-between; flex-direction: row">
+						<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
+							<img style="width: 200px" src= "images/react.png" />
+							<a href="https://sap.github.io/ui5-webcomponents-sample-react/">React app</a>
+						</div>
+						<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
+							<img style="width: 200px" src= "images/angular.png" />
+							<a href="https://sap.github.io/ui5-webcomponents-sample-angular/">Angular app</a>
+						</div>
+						<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
+							<img style="width: 200px" src= "images/vue.png" />
+							<a href="https://sap.github.io/ui5-webcomponents-sample-vue/">Vue app</a>
+						</div>
+					</div>
+				</div>
 			</section>
-		</section>
-
 		</section>
 
 		<!-- Thank you -->
