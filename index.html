@@ -733,7 +733,8 @@
 				<h3>Declarative Renderer</h3>
 				<br>
 				<pre><code data-trim data-noescape>
-					&ltbutton type="button"
+					&ltbutton
+						type="button"
 						class="{{classes.main}}"
 						?disabled="{{disabled}}"
 						dir="{{rtl}}"
@@ -752,7 +753,8 @@
 				<br>
 				<pre><code data-trim data-noescape>
 					const ButtonTemplate = (context) => { 
-						return html`&ltbutton type="button"
+						return html`&ltbutton
+							type="button"
 							class="${context.classes.main}"
 							?disabled="${context.disabled}"
 							dir="${context.rtl}"
@@ -834,6 +836,11 @@
 						</div>
 					</div>
 				</div>
+			</section>
+
+			<section>
+				<h3 class="ui5con-divider">Fiori 3 reference app</h3>
+				<img style="width: 70%;" src="images/fiori3-app.png" />
 			</section>
 		</section>
 
