@@ -145,6 +145,9 @@
 		.fullscreen-image-slide {
 			width: 80%;
 		}
+		.reveal pre code {
+			max-height: 500px;
+		}
 	</style>
 </head>
 
@@ -725,6 +728,7 @@
 				<br>
 				<img src="images/class.png" />
 			</section>
+
 			<section>
 				<h3>Declarative Renderer</h3>
 				<br>
@@ -732,17 +736,37 @@
 					&ltbutton type="button"
 						class="{{classes.main}}"
 						?disabled="{{disabled}}"
-						>
+						dir="{{rtl}}"
+					>
 						&ltui5-icon class="{{classes.icon}}" src="{{icon}}">&lt/ui5-icon>
-
 						&ltspan class="{{classes.text}}">
 							&ltbdi>&ltslot>&lt/slot>&lt/bdi>
 						&lt/span>
 					&lt/button>
 				</code></pre>
 	
-				<!-- <img src="images/hbs.png" /> -->
 			</section>
+
+			<section>
+				<h3>Template</h3>
+				<br>
+				<pre><code data-trim data-noescape>
+					const ButtonTemplate = (context) => { 
+						return html`&ltbutton type="button"
+							class="${context.classes.main}"
+							?disabled="${context.disabled}"
+							dir="${context.rtl}"
+							>
+							&ltui5-icon class="${context.classes.icon}" src="${context.icon}">&lt/ui5-icon>
+							&ltspan class="${context.classes.text}">
+								&ltbdi>&ltslot>&lt/slot>&lt/bdi>
+							&lt/span>
+						&lt/button>
+					}
+				</code></pre>
+	
+			</section>
+
 			<section>
 				<h3>Rendering</span></h3>
 				<img src="images/rendering.png" />
