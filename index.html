@@ -198,7 +198,7 @@
 					<ul style="list-style: none;">
 						<li>Custom Elements</li>
 						<li>Shadow DOM</li>
-						<li>HTML Imports</li>
+						<li>ES6 Imports</li>
 						<li>Templates</li>
 					</ul>
 				</section>
@@ -233,12 +233,14 @@
 				</section>
 
 				<section>
-					<h2>HTML Imports</h2>
-					<span>Package your elements and import them</span>
+					<h2>ES6 Imports</h2>
+					<span>Package your elements and import them as native modules</span>
 					<br>
 					<br>
 					<pre><code data-trim>
-							<link rel="import" href="myElement.html">
+							<script type="module">
+								import "@ui5/webcomponents/dist/Button.js";
+							</script>
 						</code></pre>
 				</section>
 
