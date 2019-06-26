@@ -279,13 +279,7 @@
 
 				<section>
 					<h3>More standards, Less frameworks</h3>
-					<img src="images/evo.png" />
-				</section>
-
-				<section>
-					<h3>Web Components vs. Frameworks</h3>
-					<br>
-					<img src="images/wcAndFrameworks.png" />
+					<img src="images/standards-framework.png" style="width: 80%"/>
 				</section>
 			</section>
 
@@ -360,23 +354,48 @@
 				</section>
 
 				<section>
-						<pre><code data-trim data-noescape>
-							const TodoItem = ({todo}) => {
-								return &ltui5-li key={todo.key}> {todo.text} &lt/ui5-li>;
-							};
-						</code></pre>
+					<h3>It is just an HTML ...</h3>
 
-						<pre><code data-trim data-noescape>
-							const TodoList = ({todos}) => {
-								return &ltui5-list>
-									{todos.map(todo => &ltTodoItem todo={todo}/>)}
-								&lt/ui5-list>
-							};
-						</code></pre>
+					<br>
+					<br>
 
-						
+					<pre><code data-trim data-noescape>
+						&ltui5-title>Hello UI5 Con&lt/ui5-title>
+
+						&ltbr/>
+
+						&ltui5-button style="color: red">Hello UI5 Con&lt/ui5-button>
+
+						&ltui5-list id="my-list" class="list-sample">
+							&ltui5-li>Pineapple&lt/ui5-li>
+							&ltui5-li>Apple&lt/ui5-li>
+							&ltui5-li>Banana&lt/ui5-li>
+						&lt/ui5-list>
+					</code></pre>
 				</section>
-					
+
+				<!-- <section>
+
+						<h3>React</h3>
+
+						<pre><code data-trim data-noescape>
+							&lt;ui5-button&gt;{model.text}&lt;/ui5-button&gt;
+						</code></pre>
+
+						<h3>Angular</h3>
+
+						<pre><code data-trim data-noescape> 
+							&lt;ui5-button&gt;{{model.text}}&lt;/ui5-button&gt;
+						</code></pre>
+
+						<h3>Vue</h3>
+
+						<pre><code data-trim data-noescape> 
+							&lt;ui5-button&gt;{{model.text}}&lt;/ui5-button&gt;
+						</code></pre>
+				</section> -->
+
+
 				<section>
 
 					<h3>Eventing</h3>
