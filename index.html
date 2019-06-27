@@ -217,14 +217,15 @@
 					<br>
 					<br>
 					<pre><code data-trim>
-							class MyComponent extends HTMLElement {...}
-							window.customElements.define('my-component', MyComponent);
+							&ltscript>
+								class MyComponent extends HTMLElement {
 
-							<my-component>
-								<h1>Hello UI5 Con!</h1>
+								}
 
-								<span>UI5 Web Components</span>
-							</my-component>
+								window.customElements.define('my-component', MyComponent);
+							&lt/script>
+
+							<my-component></my-component>
 						</code></pre>
 				</section>
  
@@ -234,13 +235,35 @@
 					<br>
 					<br>
 					<pre><code data-trim>
-									const shadow = this.createShadowRoot();
-
-									shadow.innerHTML = '<h1 style="color: red">Hello UI5 Con!</h1>';
-							</code></pre>
+							class MyComponent extends HTMLElement {
+								constructor() {
+									super();
+									const shadowRoot = this.attachShadow({mode: 'open'});
+									shadowRoot.innerHTML = '<h1>Hello UI5con!</h1>';
+								}
+							}
+						</code></pre>
 				</section>
 
 				<section>
+					<script>
+							class MyComponent extends HTMLElement {
+								constructor() {
+									super();
+									const shadowRoot = this.attachShadow({mode: 'open'});
+									shadowRoot.innerHTML = '<h1>Hello UI5con!</h1>';
+								}
+							};
+							window.customElements.define('my-component', MyComponent);
+					</script>
+
+						<my-component></my-component>
+
+						<img src="images/shadow-dom-sample.png" alt="sample shadow root">
+				</section>
+
+
+				<!-- <section>
 					<h2>ES6 Imports</h2>
 					<span>Package your elements and import them as native modules</span>
 					<br>
@@ -265,11 +288,11 @@
 								</tr>
 							</template>
 						</code></pre>
-				</section>
+				</section> -->
 
-				<section>
+				<!-- <section>
 					<img src="images/support.png" />
-				</section>
+				</section> -->
 
 				<section>
 					<div>
@@ -611,22 +634,6 @@
 				</section>
 
 				<section>
-						<h3>Adding Style / Class attribute</h3>
-						<br>
-						<pre><code data-trim data-noescape>
-							&ltui5-badge>Hello UI5 Con&lt/ui5-badge>
-						</code></pre>
-
-						<ui5-badge style="height: 3rem; width: 30%;">Hello UI5 Con</ui5-badge>
-
-						<pre><code data-trim data-noescape>
-								&ltui5-badge style="border: 2px solid red; color: blue;">Hello UI5 Con&lt/ui5-badge>
-							</code></pre>
-
-					<ui5-badge style="height: 3rem; width: 30%;border: 2px solid red; color: blue;">Hello UI5 Con</ui5-badge>
-				</section>
-
-				<section>
 						<h3>CSS Shadow parts<sup>*</sup></h3>
 						<br>
 
@@ -659,34 +666,6 @@
 								font-size: 2rem;
 							}
 						</style>
-
-				</section>
-
-				<section>
-					<h3>Setting CSS properties</h3>
-					<br>
-
-					<pre><code data-trim data-noescape>
-						&ltstyle>
-							#my-panel {
-								--ui5-panel-background-color: yellow;
-							}
-						&lt/style>
-
-						&ltui5-panel id="my-panel">
-							...
-						&lt/ui5-panel>
-						</code></pre>
-
-					<br>
-					<ui5-panel id="my-panel" style="--ui5-panel-background-color: yellow; font-size: initial; width: 30%; display: inline-block; border: 1px solid black;">
-						<ui5-messagestrip>Hello UI5 Con !!!</ui5-messagestrip>
-
-						<br>
-						<br>
-
-						<ui5-button>I am filling some content</ui5-button>
-					</ui5-panel>
 
 				</section>
 
@@ -814,10 +793,10 @@
 				<pre><code data-trim data-noescape>
 						class Button extends UI5Element {
 
-							static get metadata() // properties and slots
+							static get metadata() // properties, events and slots
 							static get styles() // styles
-							static get render() // lit-html
-							static get template() // template
+							static get render() // rendering engine
+							static get template() // template for rendering
 
 							onBeforeRendering() {}
 							onAfterRendering() {}
@@ -832,10 +811,10 @@
 				<img style="width: 50%" src="images/rendering.png" />
 			</section>
 
-			<section>
+			<!-- <section>
 				<h3>Rendering</h3>
 				<img style="width: 50%" src="images/rendering2.png" />
-			</section>
+			</section> -->
 
 			<section>
 				<h3>Declarative Renderer</h3>
@@ -874,16 +853,74 @@
 				</code></pre>
 			</section>
 
-			<section>
+			<!-- <section>
 				<h3>Rendering</h3>
 				<img style="width: 50%" src="images/rendering3.png" />
+			</section> -->
+
+			<section>
+					<pre><code data-trim data-noescape>
+							&ltui5-button>Press me&lt/ui5-button>
+						</code></pre>
 			</section>
 
 			<section>
-				<h3>Ta-da!</h3>
-				<ui5-button style="width: 150px;height: 60px;">Press me</ui5-button>
+				<h3>Shadow DOM</h3>
+				<!-- <div class="flex"> -->
+					<img src="images/shadow-dom.png" alt="shadow dom" style="width: 50%;">
+					<!-- <ui5-button style="width: 150px;height: 60px;">Press me</ui5-button> -->
+				<!-- </div> -->
 			</section>
+
+			<section>
+					<h3>Ta-da!</h3>
+						<ui5-button style="width: 150px;height: 60px;">Press me</ui5-button>
+				</section>
 		</section>
+		<section>
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">Get<span class="ui5con-orange"> started</span></h3>
+				</section>
+	
+				<section>
+					<h3 class="ui5con-divider">Playground</h3>
+					<a href="https://sap.github.io/ui5-webcomponents/" target="_blank">
+						<img style="width: 70%" src="images/ui5con-2019.png" />
+					</a>
+				</section>
+	
+				<section>
+					<h3 class="ui5con-divider">Reference apps</h3>
+					<br>
+					<div style="width: 80%; margin: 0 auto;">
+						<div style="display: flex; justify-content: space-between; flex-direction: row">
+							<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
+								<a href="https://sap.github.io/ui5-webcomponents-sample-react/" target="_blank">
+									<img style="width: 200px" src= "images/react.png" />
+								</a>
+							</div>
+							<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
+								
+								<a href="https://sap.github.io/ui5-webcomponents-sample-angular/" target="_blank">
+									<img style="width: 200px" src= "images/angular.png" />
+								</a>
+							</div>
+							<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
+								<a href="https://sap.github.io/ui5-webcomponents-sample-vue/" target="_blank">
+									<img style="width: 200px" src= "images/vue.png" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+	
+				<section>
+					<h3 class="ui5con-divider">Fiori 3 reference app</h3>
+					<a href="https://github.wdf.sap.corp/pages/ui5-webcomponents/fiori3-sample-app/" target="_blank">
+						<img style="width: 70%;" src="images/fiori3-app.png" />
+					</a>
+				</section>
+			</section>
 
 		<section>
 			<section data-background-color="#000">
@@ -901,11 +938,11 @@
 			</section>
 
 			<section>
-				<h2>We need<span class="ui5con-orange"> you!</span></h3>
+				<img style="width: 70%;" src="images/status.png" />
 			</section>
 
 			<section>
-				<img style="width: 70%;" src="images/status.png" />
+				<h2>We need<span class="ui5con-orange"> you!</span></h3>
 			</section>
 
 			<section>
@@ -918,51 +955,6 @@
 					<li>Server-Side Rendering</li>
 				</ul>
 				<div style="height: 200px"></div>
-			</section>
-		</section>
-
-		<section>
-			<section data-background-color="#000">
-				<h2 class="ui5con-divider">Get<span class="ui5con-orange"> started</span></h3>
-			</section>
-
-			<section>
-				<h3 class="ui5con-divider">Playground</h3>
-				<a href="https://sap.github.io/ui5-webcomponents/" target="_blank">
-					<img style="width: 70%" src="images/ui5con-2019.png" />
-				</a>
-			</section>
-
-			<section>
-				<h3 class="ui5con-divider">Reference apps</h3>
-				<br>
-				<div style="width: 80%; margin: 0 auto;">
-					<div style="display: flex; justify-content: space-between; flex-direction: row">
-						<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
-							<a href="https://sap.github.io/ui5-webcomponents-sample-react/" target="_blank">
-								<img style="width: 200px" src= "images/react.png" />
-							</a>
-						</div>
-						<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
-							
-							<a href="https://sap.github.io/ui5-webcomponents-sample-angular/" target="_blank">
-								<img style="width: 200px" src= "images/angular.png" />
-							</a>
-						</div>
-						<div style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
-							<a href="https://sap.github.io/ui5-webcomponents-sample-vue/" target="_blank">
-								<img style="width: 200px" src= "images/vue.png" />
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section>
-				<h3 class="ui5con-divider">Fiori 3 reference app</h3>
-				<a href="https://github.wdf.sap.corp/pages/ui5-webcomponents/fiori3-sample-app/" target="_blank">
-					<img style="width: 70%;" src="images/fiori3-app.png" />
-				</a>
 			</section>
 		</section>
 
