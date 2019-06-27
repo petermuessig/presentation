@@ -426,7 +426,41 @@
 									alert(event.target.value);
 								});
 						</code></pre>
-					</section>
+				</section>
+
+				<section>
+					<h3>Aggregation via slots</h3>
+					<br>
+					<pre><code data-trim data-noescape>
+						&ltui5-panel>
+							&lt!-- Panel header -->
+							&ltdiv slot="header">
+								&ltui5-button design="Emphasized">Add&lt/ui5-button>
+								&ltui5-button design="Negative">Remove&lt/ui5-button>
+							&lt/div>
+
+							&ltdiv>Hello UI5Con 2019!&lt/div>
+						&lt/ui5-panel>
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Aggregation via slots</h3>
+					<br>
+					<br>
+					<div style="display: flex; justify-content: center;">
+
+						<ui5-panel style="width: 50%; font-size: 1rem;" collapsed>
+							<div slot="header" style="display: flex; align-items: flex-end; justify-content: flex-end;padding: 0.5rem;">
+								<ui5-button design="Emphasized" style="margin-right: 0.5rem">Add</ui5-button>
+								<ui5-button design="Negative">Remove</ui5-button>
+							</div>
+	
+							<div>Hello UI5Con 2019!</div>
+						</ui5-panel>
+					</div>
+					
+				</section>
 
 					<section>
 						<pre><code data-trim data-noescape>
@@ -718,7 +752,7 @@
 			</section>
 
 			<section>
-				<h3>i18n <span style="font-size:0.5em">(40+ languages)</span></h3>
+				<h3>i18n <span style="font-size:0.5em">(30+ languages)</span></h3>
 				<pre style="width: 40%;"><code style="font-size:0.5em" data-trim data-noescape>
 							&ltscript data-id="sap-ui-config" type="application/json">
 							{
@@ -763,13 +797,34 @@
 			<section data-background-color="#000">
 				<h2 class="ui5con-divider">High Level <span class="ui5con-orange">Architecture</span></h2>
 			</section>
+
 			<section>
 				<img style="width: 60%" src="images/architecture.png" />
 			</section>
+
 			<section>
 				<h3>Class Hierarchy</span></h3>
 				<br>
-				<img style="width: 50%" src="images/class.png" />
+				<img style="height: 500px;" src="images/class.png" />
+			</section>
+
+			<section>
+				<h3>Button</h3>
+				<br>
+				<pre><code data-trim data-noescape>
+						class Button extends UI5Element {
+
+							static get metadata() // properties and slots
+							static get styles() // styles
+							static get render() // lit-html
+							static get template() // template
+
+							onBeforeRendering() {}
+							onAfterRendering() {}
+							onEnterDOM() {}
+							onExitDOM() {}
+						}
+				</code></pre>
 			</section>
 
 			<section>
@@ -782,7 +837,6 @@
 				<img style="width: 50%" src="images/rendering2.png" />
 			</section>
 
-		
 			<section>
 				<h3>Declarative Renderer</h3>
 				<br>
@@ -825,33 +879,6 @@
 				<img style="width: 50%" src="images/rendering3.png" />
 			</section>
 
-			<section>
-				<h3>Template</h3>
-				<br>
-				<pre><code data-trim data-noescape>
-					import { html } from "lit-html";
-
-					const ButtonTemplate = (context) => { 
-						return html`&ltbutton
-							type="button"
-							class="${context.classes.main}"
-							?disabled="${context.disabled}"
-							dir="${context.rtl}"
-							>
-							&ltui5-icon class="${context.classes.icon}" src="${context.icon}">&lt/ui5-icon>
-							&ltspan class="${context.classes.text}">
-								&ltbdi>&ltslot>&lt/slot>&lt/bdi>
-							&lt/span>
-						&lt/button>`
-					}
-				</code></pre>
-	
-			</section>
-			<section>
-				<h3>Rendering</h3>
-				<img style="width: 50%" src="images/rendering4.png" />
-			</section>
-			
 			<section>
 				<h3>Ta-da!</h3>
 				<ui5-button style="width: 150px;height: 60px;">Press me</ui5-button>
